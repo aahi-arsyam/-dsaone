@@ -7,7 +7,27 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-
+	    /*long long ans = INT_MIN;
+	    long long prod = 1;
+	    
+	    for(int i=0; i<n; i++)
+	    {
+	        prod *= arr[i];
+	        ans = max(ans, prod);
+	        if(prod == 0)
+	            prod = 1;
+	    }
+	    
+	    prod = 1;
+	    for(int i=n-1; i>=0; i--)
+	    {
+	        prod *= arr[i];
+	        ans = max(ans, prod);
+	        if(prod == 0)
+	            prod = 1;
+	    }
+	    return ans;*/
+	
 	// Function to find maximum product subarray
 	long long maxProduct(vector<int> arr, int n) {
 	    // code here
