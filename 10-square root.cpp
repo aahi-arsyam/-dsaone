@@ -12,7 +12,7 @@ class Solution{
     long long int floorSqrt(long long int x) 
     {
         // Your code goes here   
-        // time: O(n)
+        // time: O(root(n))
         /*long long int i = 1;
         while(true)
         {
