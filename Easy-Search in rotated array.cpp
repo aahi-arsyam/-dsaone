@@ -41,6 +41,29 @@ class Solution{
         // h: The ending index, you have to search the key in this range
         
         //complete the function here
+	    
+	  /*  while(l<=h)
+        {
+            int mid = (l+h)/2;
+            if(A[mid] == key) return mid;
+            if(A[l] <= A[mid])  // left half sorted
+            {
+                if(key >= A[l] && A[mid] > key)
+                    h = mid-1;
+                else 
+                    l = mid+1;
+            }
+            else  // right half sorted
+            {
+                if(key > A[mid] && key <= A[h])
+                    l = mid+1;
+                else 
+                    h = mid-1;
+            }
+        }
+        return -1;
+	*/
+	    
         int pivot = findKRotation(A, h); // finding the pivot point
         if(key >= A[l] && key <= A[pivot-1])  // if the key lies between low and pivot-1 
             return bsearch(A, l, pivot-1, key);
