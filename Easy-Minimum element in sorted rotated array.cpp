@@ -15,7 +15,7 @@ public:
             // just check if the first element if smaller than mid 
             // that means left half is sorted, in that case 
             // we will have to go to the right half
-            if(arr[mid] >= arr[0]) 
+            if(arr[mid] >= arr[0]) // if(arr[mid] > arr[high])
                 low = mid+1;
             // if the left half is not sorted
             // this implies right half is sorted
