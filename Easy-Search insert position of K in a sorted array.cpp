@@ -18,13 +18,14 @@ class Solution{
             if(Arr[mid] == k)
                 return mid;
             // if k is between mid and mid+1 return mid+1
-            else if(k > Arr[mid] && k < Arr[mid+1])
-                return mid+1;
+            // else if(k > Arr[mid] && k < Arr[mid+1])
+               // return mid+1;
             else if(k < Arr[mid])
                 high = mid-1;
             else 
                 low = mid+1;
         }
+        return high+1;
     }
 };
 
