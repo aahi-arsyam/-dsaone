@@ -37,6 +37,11 @@ class Solution
                     ans = max(curr_ans, ans);
             }
             return ans;*/
+            //Sort the given array, try two pointer algorithm to find sum closest to zero.
+            // Step1: Maintain two pointer left and right initialized with 0 and n-1.
+            // Step2: find sum(arr[left] + arr[right]) and check if absolute sum is < previous absolute sum then update the previous sum
+            // Step3: increment left pointer by 1 if sum < 0, otherwise if sum > 0 then decrement right pointer by 1.
+            // Step4: Repeat above step until left < right.
             // time O(nlogn)
             sort(arr, arr+n);
             int low = 0, high = n-1;
