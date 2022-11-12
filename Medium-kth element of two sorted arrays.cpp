@@ -11,15 +11,15 @@ class Solution{
         if(m<n)
             return kthElement(arr2, arr1, m, n, k);
         
-        int low = max(0, k-m);
-        int high = min(k, n);
+        int low = max(0, k-m); // because if k>m then we will have to choose atleast k-m elements from the first array
+        int high = min(k, n); // because if k<n then we can atmost select k elements from first array
         
         while(low <= high)
         {
             int cut1 = low + (high - low)/2;
             int cut2 = k - cut1;
             
-            int l1 = cut1 == 0 ? INT_MIN : arr1[cut1-1];
+            int l1 = cut1 == 0 ? INT_MIN : arr1[cut1-1]; 
             int l2 = cut2 == 0 ? INT_MIN : arr2[cut2-1];
             int r1 = cut1 == n ? INT_MAX : arr1[cut1];
             int r2 = cut2 == m ? INT_MAX : arr2[cut2];
